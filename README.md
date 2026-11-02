@@ -63,12 +63,17 @@ pi install /Volumes/CODE/personal/projects/pi_config
 | `/pi-check install` | Only rebuilds and installs pi-check into `~/.cargo/bin` |
 | `/pi-check config status\|apply\|capture [paths]` | Runs `pi-check config ...` with the installed binary (`~` in paths is expanded) |
 
-The registry also tracks a `/handoff [focus]` prompt template (`home/.pi/agent/prompts/handoff.md`):
-it asks the model to write the continuation prompt for a new session to `odd/handoff/<slug>.md`, following
-the "Session handoff" rule in `~/.pi/agent/AGENTS.md`, without relying on it recognizing the phrase.
-One file per task and role keeps sessions that share a checkout (one codes, another reviews) from
-overwriting each other's handoff. The session that continues from a file deletes it once the task is
-done, and handoffs are never mirrored to Engram.
+The registry also tracks the session handoff:
+
+- `home/.pi/agent/skills/session-handoff/SKILL.md` holds the rules. As a skill, only its name and
+  description load in every session; the body is read when the user asks to continue in a new session.
+- `/handoff [focus]` (`home/.pi/agent/prompts/handoff.md`) forces that skill, without relying on the
+  model recognizing the phrase.
+
+The continuation prompt goes to `odd/handoff/<slug>.md`. One file per task and role keeps sessions that
+share a checkout (one codes, another reviews) from overwriting each other's handoff. The file carries
+the rules for the session that continues: it checks the file against git, deletes it once the task is
+done, and never mirrors it to Engram.
 Run `/reload` (or restart Pi) after applying it.
 
 Set `GITHUB_TOKEN` to avoid GitHub's anonymous rate limit. Set `NO_COLOR` to disable colors.

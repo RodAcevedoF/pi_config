@@ -22,9 +22,3 @@ refactor:
 ## ODD
 
 - `odd/` stays local and untracked; never force-add it.
-
-## Session handoff
-
-- When the user wants to continue in a new session with work in progress ("abrimos nueva sesión", "dame un prompt para la siguiente sesión", context size), write a self-contained continuation prompt to `odd/handoff/<slug>.md` without being asked: date, branch, working directory, done, pending, decisions, how to verify. Sessions may share a checkout, so `<slug>` names the task and role (`login-fix`, `login-fix-review`).
-- A session owns the file it wrote or continued from: it rewrites it on the next handoff and deletes it when the task is done. Ask before replacing a file you do not own. Never mirror handoffs to Engram.
-- Reply with the prompt and `Read odd/handoff/<slug>.md and continue.` Read a handoff only when the user points to it, and check it against git and the code before acting.
