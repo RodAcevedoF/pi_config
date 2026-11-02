@@ -1,0 +1,42 @@
+{
+  "orchestrator": {
+    "model": "claude-bridge/claude-opus-5-5",
+    "thinking": "high"
+  },
+  "gentle-ai-explore": {
+    "model": "claude-bridge/claude-sonnet-5-5"
+  },
+  "review-readability": {
+    "model": "claude-bridge/claude-sonnet-5-5"
+  },
+  "review-reliability": {
+    "model": "claude-bridge/claude-sonnet-5-5"
+  },
+  "review-resilience": {
+    "model": "claude-bridge/claude-sonnet-5-5"
+  },
+  "review-risk": {
+    "model": "claude-bridge/claude-opus-5-5"
+  },
+  "gentle-ai-worker": {
+    "model": "claude-bridge/claude-opus-5-5"
+  },
+  "gentle-ai-verify": {
+    "model": "claude-bridge/claude-opus-5-5"
+  },
+  "jd-fix-agent": {
+    "model": "claude-bridge/claude-opus-5-5"
+  },
+  "jd-judge-b": {
+    "model": "claude-bridge/claude-sonnet-5-5"
+  },
+  "jd-judge-a": {
+    "model": "claude-bridge/claude-opus-5-5"
+  },
+  "review-validator": {
+    "model": "claude-bridge/claude-opus-5-5"
+  },
+  "review-refuter": {
+    "model": "claude-bridge/claude-opus-5-5"
+  }
+}

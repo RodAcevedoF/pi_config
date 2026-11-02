@@ -1,0 +1,4 @@
+/target
+
+# The global excludes file ignores AGENTS.md everywhere; this registry tracks it.
+!AGENTS.md

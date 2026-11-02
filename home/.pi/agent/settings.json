@@ -1,0 +1,34 @@
+{
+  "theme": "Gentleman-Cute",
+  "defaultProvider": "claude-bridge",
+  "defaultModel": "claude-opus-5-5",
+  "npmCommand": [
+    "/Users/racevedo/.nvm/versions/node/v24.11.1/bin/node",
+    "/Users/racevedo/.nvm/versions/node/v24.11.1/lib/node_modules/npm/bin/npm-cli.js"
+  ],
+  "packages": [
+    {
+      "source": "npm:pi-web-access",
+      "extensions": [],
+      "skills": [],
+      "prompts": [],
+      "themes": []
+    },
+    "npm:pi-open-tui",
+    "npm:gentle-pi",
+    "npm:pi-claude-bridge",
+    "npm:gentle-engram",
+    "npm:pi-btw",
+    "../../../../Volumes/CODE/personal/projects/pi_config"
+  ],
+  "terminal": {
+    "showTerminalProgress": true
+  },
+  "tuiMode": "fullscreen",
+  "fullscreenCopyOnSelect": true,
+  "extensions": [
+    "-builtin:codemode"
+  ],
+  "defaultThinkingLevel": "high",
+  "hideThinkingBlock": true
+}

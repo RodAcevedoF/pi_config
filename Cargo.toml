@@ -1,0 +1,13 @@
+[package]
+name = "pi-check"
+version = "0.1.0"
+edition = "2024"
+description = "Compare the local Pi, Gentle Shell and Engram setup against the latest published versions"
+
+[dependencies]
+semver = "1"
+serde_json = { version = "1", features = ["preserve_order"] }
+ureq = { version = "3", features = ["json"] }
+
+[dev-dependencies]
+tempfile = "3"

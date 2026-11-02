@@ -1,0 +1,5 @@
+#!/bin/sh
+PINNED="$HOME/.nvm/versions/node/v24.11.1"
+export npm_config_prefix="$PINNED"
+exec "$PINNED/bin/node" \
+  "$PINNED/lib/node_modules/@earendil-works/pi-coding-agent/dist/bundle/cli.js" "$@"
