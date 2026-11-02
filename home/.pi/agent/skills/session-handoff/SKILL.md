@@ -25,6 +25,7 @@ description: Write a continuation prompt so a new session can resume work in pro
 - Date: <YYYY-MM-DD>
 - Branch: <branch>
 - Working directory: <absolute path>
+- Feature document: <path or none>
 
 ## Done
 - <what is finished, with commits or files>
@@ -39,7 +40,7 @@ description: Write a continuation prompt so a new session can resume work in pro
 - <exact commands and expected results>
 
 ## Rules for the session that continues
-- Check this file against git and the code before acting; they win over it.
+- Run "How to verify" first and report in one line whether the starting point matches; git, the code and the feature document win over this file.
 - You own this file: rewrite it on your next handoff and delete it when the task is done.
 - Never mirror it to Engram.
 ```
