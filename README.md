@@ -64,8 +64,11 @@ pi install /Volumes/CODE/personal/projects/pi_config
 | `/pi-check config status\|apply\|capture [paths]` | Runs `pi-check config ...` with the installed binary (`~` in paths is expanded) |
 
 The registry also tracks a `/handoff [focus]` prompt template (`home/.pi/agent/prompts/handoff.md`):
-it asks the model to write the continuation prompt for a new session to `odd/handoff.md`, following
+it asks the model to write the continuation prompt for a new session to `odd/handoff/<slug>.md`, following
 the "Session handoff" rule in `~/.pi/agent/AGENTS.md`, without relying on it recognizing the phrase.
+One file per task and role keeps sessions that share a checkout (one codes, another reviews) from
+overwriting each other's handoff. The session that continues from a file deletes it once the task is
+done, and handoffs are never mirrored to Engram.
 Run `/reload` (or restart Pi) after applying it.
 
 Set `GITHUB_TOKEN` to avoid GitHub's anonymous rate limit. Set `NO_COLOR` to disable colors.
