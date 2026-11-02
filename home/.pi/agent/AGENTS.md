@@ -22,3 +22,4 @@ refactor:
 ## ODD
 
 - `odd/` stays local and untracked; never force-add it.
+- Read a handoff in `odd/handoff/` only when the user points to it.
