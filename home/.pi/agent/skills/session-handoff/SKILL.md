@@ -37,10 +37,10 @@ description: Write a continuation prompt so a new session can resume work in pro
 - <decision and why>
 
 ## How to verify
-- <exact commands and expected results>
+- <read-only commands and expected results>
 
 ## Rules for the session that continues
-- Run "How to verify" first and report in one line whether the starting point matches; git, the code and the feature document win over this file.
+- Run the read-only checks in "How to verify" first; skip any command that changes state and say so. Report in one line whether the starting point matches; git, the code and the feature document win over this file.
 - You own this file: rewrite it on your next handoff and delete it when the task is done.
 - Never mirror it to Engram.
 ```
