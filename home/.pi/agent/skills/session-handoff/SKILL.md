@@ -1,6 +1,7 @@
 ---
 name: session-handoff
-description: Write a continuation prompt so a new session can resume work in progress. Trigger: the user wants to continue in a new session ("abrimos nueva sesión", "dame un prompt para la siguiente sesión", "handoff"), context size, /handoff.
+description: >-
+  Write a continuation prompt so a new session can resume work in progress. Trigger: the user wants to continue in a new session ("abrimos nueva sesión", "dame un prompt para la siguiente sesión", "handoff"), context size, /handoff.
 ---
 
 # Session handoff
